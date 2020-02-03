@@ -15,12 +15,12 @@ class String
   end
 
   def count_sentences
-    delimiters = [".","?","!"]  #define delimiters 
+    delimiters = [".","?","!"]  #define delimiters
 
-    #take string that class is going to be called on 
+    #take string that class is going to be called on
     #split it up using the three delimiters
-    #reject any empty strings 
-    #count numbers of items/sentences 
+    #reject any empty strings
+    #count numbers of items/sentences
     self.split(Regexp.union(delimiters)).reject { |k| k.empty? }.count
   end
 end
