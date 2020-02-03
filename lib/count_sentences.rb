@@ -15,6 +15,7 @@ class String
   end
 
   def count_sentences
-    self.split(".","?","!").reject(&:blank?).count
+    delimiters = [".","?","!"]
+    self.split(Regexp.union(delimiters)).reject(&:blank?).count
   end
 end
